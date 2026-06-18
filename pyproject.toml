@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legal-mcp-template"
+version = "0.1.0"
+description = "Template para que estudiantes de Derecho construyan un conector MCP legal con grounding no-bypasseable. IA Lab — Facultad de Derecho, Universidad de Palermo."
+requires-python = ">=3.11"
+license = { text = "BSD-3-Clause" }
+authors = [
+    { name = "Guido Barosio" },
+    { name = "Juan Cruz Romano" },
+    { name = "Hernán Quadri" },
+    { name = "Aníbal Ramírez" },
+]
+
+# Dependencias mínimas, pineadas a la última estable al momento de construir.
+dependencies = [
+    "mcp==1.28.0",
+    "pydantic==2.13.4",
+    "pyyaml==6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.0",
+    "ruff==0.15.18",
+]
+
+# Comando para lanzar el server (lo usa un cliente MCP como Claude).
+# Se instala como `legal-mcp` dentro del entorno.
+[project.scripts]
+legal-mcp = "legalmcp.server:run"
+
+# El harness vive en el paquete legalmcp/. Tu código (my_tools.py) y el ejemplo
+# NO son parte del paquete instalable: son archivos que editás/forkeás.
+[tool.setuptools]
+packages = ["legalmcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+# Lint del harness, tu código, el ejemplo y los tests.
+include = ["legalmcp/**/*.py", "my_tools.py", "examples/**/*.py", "tests/**/*.py"]
