@@ -1,0 +1,17 @@
+# Manifiesto de tu conector MCP. Completalo cuando termines tu tool.
+#
+# Este archivo describe quién hizo el conector, sobre qué dominio, con qué fuentes
+# y en qué estado de revisión está. NO certifica corrección jurídica.
+
+author: "Tu Nombre — UP Derecho"      # quién construyó este conector
+domain: "describí tu dominio acá"      # p. ej. "derechos del consumidor"
+
+# Lista de ids de fuentes (las claves de sources.yaml) que usa tu conector.
+# Ejemplo: [ldc_art_4, ldc_art_11]
+sources: []
+
+# Estado de revisión. Empieza en "borrador". Cambialo solo cuando un humano
+# revisó el contenido jurídico.
+review_status: borrador
+
+license: "BSD-3-Clause"

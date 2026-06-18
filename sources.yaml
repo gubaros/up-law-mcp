@@ -1,0 +1,15 @@
+# Tu registro de fuentes. Plantilla con UN ejemplo.
+#
+# Cada fuente que quieras citar en my_tools.py tiene que estar declarada acá
+# primero. La clave (p. ej. "mi_fuente_ejemplo") es el id que pasás a src(...).
+#
+# Campos:
+#   cita    (obligatorio) — el texto de la cita, p. ej. "Ley XX.XXX, art. Y — tema"
+#   url     (opcional)    — la URL oficial, SOLO si la verificaste. Si no, dejala vacía.
+#   locator (opcional)    — ubicación fina: "art. 4", "considerando 12", "p. 7".
+
+sources:
+  mi_fuente_ejemplo:
+    cita: "Ley XX.XXX (nombre de la ley), art. Y — tema de la norma"
+    url:            # poné la URL oficial cuando la verifiques; si no, dejala vacía
+    locator: "art. Y"

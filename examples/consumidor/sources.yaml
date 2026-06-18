@@ -1,0 +1,18 @@
+# Registro de fuentes del ejemplo "consumidor".
+#
+# Cada entrada es una fuente que las tools pueden citar. La clave (p. ej.
+# "ldc_art_4") es el id que usás en el código con src("ldc_art_4").
+#
+# Las URLs quedan vacías a propósito: ver SOURCES.md, donde anotamos que falta
+# verificar la URL oficial de InfoLEG. NO inventamos URLs.
+
+sources:
+  ldc_art_4:
+    cita: "Ley 24.240 (Defensa del Consumidor), art. 4 — Información al consumidor"
+    url:            # pendiente de verificar (ver SOURCES.md)
+    locator: "art. 4"
+
+  ldc_art_11:
+    cita: "Ley 24.240 (Defensa del Consumidor), art. 11 — Garantía legal"
+    url:            # pendiente de verificar (ver SOURCES.md)
+    locator: "art. 11"
